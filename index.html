@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL Security Checker</title>
+</head>
+<body>
+    <h1>MySQL Security Checker</h1>
+    <form method="post" action="/">
+        <label for="host">MySQL Host:</label>
+        <input type="text" id="host" name="host" required><br>
+
+        <label for="user">MySQL User:</label>
+        <input type="text" id="user" name="user" required><br>
+
+        <label for="password">MySQL Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="Db">Enter Database:</label>
+        <input type="text" id="Db" name="Db" required><br>
+        
+        
+
+        <button type="submit">Check Security</button>
+    </form>
+
+    {% if result_message %}
+        <p>{{ result_message }}</p>
+    {% endif %}
+</body>
+</html>
+ 
+
+
